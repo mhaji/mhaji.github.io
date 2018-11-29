@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--CSS -->
+    <link re="stylesheet" href="style.css">
+
+    <title>Hello, world!</title>
+    <style>
+      .responsive {
+    max-width: 100%;
+    height: auto;}
+    </style>
+    <style>
+    #boxshadow {
+      position: relative;
+      -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+      -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+      padding: 10px;
+      background: white;
+    }
+    
+    /* Make the image fit the box */
+    #boxshadow img {
+    width: 100%;
+    border: 1px solid #8a4419;
+    border-style: inset;
+    }
+    
+    #boxshadow::after {
+    content: '';
+    position: absolute;
+    z-index: -1; /* hide shadow behind image */
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);                
+    width: 70%; 
+    left: 15%; /* one half of the remaining 30% */
+    height: 100px;
+    bottom: 0;
+    }
+</style>
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #e3f2fd;">
+              <a class="navbar-brand" href="#">Latitude</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="web_template.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="convertcsv.html">Data</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="compare.html">Comparision</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: floralwhite;">
+                      
+                      <button class="dropdown-item" type="button"><a href="compare.html#Fig1" class="dropdown-item" type="button">max temp</a></button>
+                      
+                      <button class="dropdown-item" type="button"><a href="compare.html#Fig2" class="dropdown-item" type= "button">humidity</a></button>
+                      <button class="dropdown-item" type="button"><a href="compare.html#Fig3" class= "dropdown-item" type= "button">cloudiness</a></button>
+                      <button class="dropdown-item" type="button"><a href="compare.html#Fig4" class= "dropdown-item" type= "button">wind speed</a></button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+    
+           <div class ="content" style="margin-top: 55px;">
+                <div class='row' style='background-color: linen;'>
+                  <div class="col-sm-12 col-md-10 col-lg-6">
+                    <br>
+                    <div class="box" style="margin-left: 30px;">
+                      <h1 class='title text-center'>Temperature VS. Latitude</h1>
+                      <br>
+                      <img src="/Users/minhajhaji/Desktop/Northwestern/Web_Hw/12-Web/Instructions/Resources/assets/images/Fig1.png" alt="lat and temperature" height='700' width='700' class="responsive">
+                      <br>
+                      
+                      <div class='box' style="margin-top: 30px;">
+                        <div class='row'>
+                          <h3 class="text-center">Plot Analysis </h3><br>
+                        </div>
+                        
+                        <div class='row'>
+                          <p class='category'> the purpose of this project is to analyze how weather chsnges as you get closet to the equator. The data was gathered from the openweathermap API to obtain a dataset for 500+ cities.</p>
+                          <p>The data from the API request was then organized into a table using pandas dataframe.</p>
+                        </div>
+
+                        </div>
+                        
+                    </div>
+                  </div>
+
+                  <div class=" col-lg-5">
+                    <br>
+                    <div class='box'>
+                      <div class="page-header">
+                        <h1 class='title text-center'>Visualizations</h1>
+                      </div>
+                      <div class="box" style="margin-left:20px;">
+                        <a href="#"><img src='Resources/assets/images/Fig1.png' alt='lat and temp' height='200' width='200' style="margin-bottom: 10px; margin-right:10px;"></a>
+                        <a href="#"><img src='Resources/assets/images/Fig2.png' alt='lat and humidity' height='200' width='200' style="margin-bottom: 10px; margin-right:10px;"></a>
+                        <a href="#"><img src='Resources/assets/images/Fig3.png' alt='lat and cloudiness' height='200' width='200' style="margin-bottom: 10px; margin-right:10px;"></a>
+                        <a href="#"><img src='Resources/assets/images/Fig4.png' alt='lat and windiness' height='200' width='200' style="margin-bottom: 10px; margin-right:10px;"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+           
+          
+
+
+
+                
+           
+  
+
+      
+        <!-- <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+          </nav>
+        
+          
+          <div class="container-fluid" style="margin-left: 65px;">
+
+            <div class="row">
+              <div class="col">
+                <p>column 1</p>
+                
+                <div class="row">
+                  <p>hello 1</p>
+                  <h5 class="card-header">Featured</h5>
+                </div>
+                
+                <div class="row">
+                  <p>hello 2</p>
+                  <img src= "/Web_Hw/12-Web/Instructions/Resources/assets/images/Fig1.png/" alt="figure 1">
+
+                </div>
+                <p>paragraphn 1</p>
+                <p>paragraphn 1</p>
+                <p>paragraphn 1</p>
+                <p>paragraphn 1</p>
+                <p>paragraphn 1</p>
+                
+                <div class="row">
+                  <p>hello 3</p>
+                </div>
+              </div>
+              
+              <div class="col">
+                
+              
+
+
+                <p>column 2</p>
+
+                <div class="row sm">
+                  <p>Hello 1x</p>
+                </div>
+                <p>paragraphn 1</p>
+                <p>paragraphn 1</p>
+                <p>paragraphn 1</p>
+                  
+                <div class="row">
+                  <p>Hello 2x</p>
+                </div>
+
+                <div class="row">
+                  <p>Hello 3x</p>
+                </div>
+              
+              </div>
+            
+            </div>
+          
+          </div>
+        
+        </div> -->
+    
+
+
+
+
+    
+
+    <!-- Optional JavaScript -->
+    <script src="myScript.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
